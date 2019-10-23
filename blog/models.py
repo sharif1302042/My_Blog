@@ -28,6 +28,7 @@ class PostManager(models.Manager):
 class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='author')
     title = models.CharField(max_length=200)
+    details = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = PostManager()
