@@ -8,7 +8,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 class PostAdmin(admin.ModelAdmin):
     search_fields = ('pk',)
-    list_display = ('pk','author','title','created_at','updated_at',)
+    list_display = ('pk','author','title','category','url','updated_at',)
 
 admin.site.register(Author,AuthorAdmin)
 admin.site.register(Post,PostAdmin)

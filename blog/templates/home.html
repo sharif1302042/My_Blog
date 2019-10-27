@@ -1,157 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% for p in post %}
     <div class="post">
-        <h2 class="mt-4">{{ post.title }}</h2>
+        <h2 class="mt-4"><b>{{ p.title }}</b></h2>
         <div class="row mb-2">
             <div class="col-lg-6">
-                <h5><a href="#">{{ post.author }}</a></h5>
+                <h6>{{ p.category }}, By <a href="#">{{ p.author }}</a></h6>
             </div>
             <div class="col-lg-6">
-                {{ post.updated_at }}
+                {{ p.updated_at }}
             </div>
-        </div>
+        </div><hr>
         <p class="pb-2">
-            লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
-            লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-            তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
+            {{ p.details }}
         </p>
-        <a href="#" style="list-style: none">
+        <a href="{{ p.url }}" style="list-style: none">
             <button type="button" class="btn btn-outline-info btn-lg btn-block">
                 Continue Reading.....
             </button>
             <br></a>
 
     </div>
-    <div class="post">
-        <h2 class="mt-4">{{ post.title }}</h2>
-        <div class="row mb-2">
-            <div class="col-lg-6">
-                <h5><a href="#">{{ post.author }}</a></h5>
-            </div>
-            <div class="col-lg-6">
-                {{ post.updated_at }}
-            </div>
-        </div>
-        <p class="pb-2">
-            লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
-            লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-            তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
-        </p>
-        <a href="#">
-            <button type="button" class="btn btn-outline-info btn-lg btn-block">
-                Continue Reading.....
-            </button>
-            <br></a>
+    {% endfor %}
 
-    </div>
-    <div class="post">
-        <h2 class="mt-4">{{ post.title }}</h2>
-        <div class="row mb-2">
-            <div class="col-lg-6">
-                <h5><a href="#">{{ post.author }}</a></h5>
-            </div>
-            <div class="col-lg-6">
-                {{ post.updated_at }}
-            </div>
-        </div>
-        <p class="pb-2">
-            লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
-            লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-            তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
-        </p>
-        <a href="#">
-            <button type="button" class="btn btn-outline-info btn-lg btn-block">
-                Continue Reading.....
-            </button>
-            <br></a>
-
-    </div>
-    <div class="post">
-        <h2 class="mt-4">{{ post.title }}</h2>
-        <div class="row mb-2">
-            <div class="col-lg-6">
-                <h5><a href="#">{{ post.author }}</a></h5>
-            </div>
-            <div class="col-lg-6">
-                {{ post.updated_at }}
-            </div>
-        </div>
-        <p class="pb-2">
-            লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
-            লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-            তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
-        </p>
-        <a href="#">
-            <button type="button" class="btn btn-outline-info btn-lg btn-block">
-                Continue Reading.....
-            </button>
-            <br></a>
-
-    </div>
-    <div class="post">
-        <h2 class="mt-4">{{ post.title }}</h2>
-        <div class="row mb-2">
-            <div class="col-lg-6">
-                <h5><a href="#">{{ post.author }}</a></h5>
-            </div>
-            <div class="col-lg-6">
-                {{ post.updated_at }}
-            </div>
-        </div>
-        <p class="pb-2">
-            লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
-            লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-            তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
-        </p>
-        <a href="#">
-            <button type="button" class="btn btn-outline-info btn-lg btn-block">
-                Continue Reading.....
-            </button>
-            <br></a>
-
-    </div>
-    <div class="post">
-        <h2 class="mt-4">{{ post.title }}</h2>
-        <div class="row mb-2">
-            <div class="col-lg-6">
-                <h5><a href="#">{{ post.author }}</a></h5>
-            </div>
-            <div class="col-lg-6">
-                {{ post.updated_at }}
-            </div>
-        </div>
-        <p class="pb-2">
-            লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
-            লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-            তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
-        </p>
-        <a href="#">
-            <button type="button" class="btn btn-outline-info btn-lg btn-block">
-                Continue Reading.....
-            </button>
-            <br></a>
-
-    </div>
-    <div class="post">
-        <h2 class="mt-4">{{ post.title }}</h2>
-        <div class="row mb-2">
-            <div class="col-lg-6">
-                <h5><a href="#">{{ post.author }}</a></h5>
-            </div>
-            <div class="col-lg-6">
-                {{ post.updated_at }}
-            </div>
-        </div>
-        <p class="pb-2">
-            লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
-            লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
-            তবে প্রথম দিকে বুঝতে একটু সময় লাগে |
-        </p>
-        <a href="#">
-            <button type="button" class="btn btn-outline-info btn-lg btn-block">
-                Continue Reading.....
-            </button>
-            <br></a>
-
-    </div>
 {% endblock %}

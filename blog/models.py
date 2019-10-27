@@ -26,15 +26,26 @@ class PostManager(models.Manager):
     pass
 
 class Post(models.Model):
+    CATEGORY = (
+        ('Python', 'Python',),
+        ('Django', 'Django',),
+        ('DRF', 'DRF',),
+        ('GraphQL', 'GraphQL',),
+        ('OOP', 'OOP',),
+        ('Others', 'Others',),
+    )
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='author')
     title = models.CharField(max_length=200)
     details = models.TextField()
+    category = models.CharField(choices=CATEGORY, max_length=10,default='Python')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    url = models.CharField(blank=True,null=True,max_length=200)
     objects = PostManager()
 
     def __str__(self):
         return self.title
+
 
     class Meta:
         verbose_name = 'Post'
