@@ -1,0 +1,29 @@
+{% extends 'new.html' %}
+{% block content %}
+    {% for p in post %}
+    <div class="post">
+        <h2 class="mt-4"><b>{{ p.title }}</b></h2>
+        <div class="row mb-2">
+            <div class="col-lg-6">
+                <small class="text-muted">Posted by <a href="#">{{ p.author }}</a> on {{ p.updated_at }}</small>
+            </div>
+            <!--
+            <h6>{{ p.category }}, By <a href="#">{{ p.author }}</a></h6>
+            <div class="col-lg-6">
+                {{ p.updated_at }}
+            </div>
+            -->
+        </div><hr>
+        <p class="pb-2">
+            {{ p.details }}
+        </p>
+        <a href="{{ p.url }}" style="style: none">
+            <button type="button" class="btn btn-outline-info btn-lg btn-block">
+                Continue Reading.....
+            </button>
+            <br></a>
+
+    </div>
+    {% endfor %}
+
+{% endblock %}

@@ -8,7 +8,7 @@ from blog.models import Post
 
 class Index(APIView):
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = 'home.html'
+    template_name = 'new_index.html'
 
     def get(self, request):
         post = Post.objects.all().order_by('-updated_at')

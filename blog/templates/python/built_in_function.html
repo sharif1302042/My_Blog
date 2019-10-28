@@ -1,16 +1,15 @@
-{% extends 'python/python_base.html' %}
+{% extends 'new.html' %}
 {% block content %}
     <div class="post">
         <h2 class="mt-4"><b>{{ post.title }}</b></h2>
         <div class="row mb-2">
             <div class="col-lg-6">
-                <h5>By: <a href="#">{{ post.author }}</a></h5>
-            </div>
-            <div class="col-lg-6">
-                {{ post.updated_at }}
+                <small class="text-muted">Posted by
+                    <a href="#">{{ post.author }}</a> on {{ post.updated_at }}
+                </small>
             </div>
         </div>
-
+        <hr>
         <p class="pb-2">
             লিস্ট কম্প্রিহেনশন হল পাইথনের এক প্রকার ম্যাজিক | আপনি ৫ ৬ লাইন এর কোড রেন্ডমলি লিখে যেই কাজ করবেন তা
             লিস্ট কম্প্রিহেনশন এর মাধ্যমে কমিয়ে দুই বা এক লাইন এ করতে পারবেন |
@@ -29,5 +28,34 @@
         </div>
 
     </div>
+    <div class="comments">
+        <h5 class="card-header mt-5">Leave Your Feedback:</h5>
+        <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">
+                        Your Feedback:</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">
+                    </label>
+                    <div class="col-sm-9">
+                        <button type="submit" class="btn btn-primary">Submit Comment</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
 
 {% endblock %}
