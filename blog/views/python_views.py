@@ -7,9 +7,6 @@ from rest_framework.views import APIView
 from blog.models import Post
 
 
-
-
-
 class StringOperation(APIView):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'python/string_operation.html'
@@ -31,7 +28,7 @@ class ListOperation(APIView):
         previous = Post.objects.get(pk=1)
         next = Post.objects.get(pk=3)
         if post:
-            return Response({'post': post,'previous':previous,'next':next}, status=status.HTTP_200_OK)
+            return Response({'post': post, 'previous': previous, 'next': next}, status=status.HTTP_200_OK)
         return Response({'post': post}, status=status.HTTP_200_OK)
 
 
