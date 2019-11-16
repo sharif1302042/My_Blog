@@ -8,19 +8,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 # Read environment variables
 
-env = environ.Env(
-    DEBUG=(bool, False),
-    ALLOWED_HOSTS=(list),
-)
-envfile_path = os.path.join(BASE_DIR, '.env')
-environ.Env.read_env(envfile_path)
+
+DEBUG=False,
+ALLOWED_HOSTS=[]
+
+# envfile_path = os.path.join(BASE_DIR, '.env')
+# environ.Env.read_env(envfile_path)
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
-
-ALLOWED_HOSTS = env('ALLOWED_HOSTS')
+SECRET_KEY='=c*tsuyh4athhas%_szs*12vul@&$)y_x6am13-qj5xo+(r!li'
 
 
 # Application definition
@@ -74,11 +69,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USERNAME"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
+        'NAME': 'blog',
+        'USER': 'sharif_42',
+        'PASSWORD': 'nothing1234',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
